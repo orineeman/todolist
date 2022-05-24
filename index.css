@@ -1,0 +1,232 @@
+.divs{
+    /* border: 1px solid red; */
+  }
+  .div1 {
+    max-width: 800px;
+    min-height: 700px;
+    margin: 0 auto;
+    margin-top: -8px;
+    border-radius: 10px;
+    background-color: rgb(230, 200, 254);
+  }
+  .Nav {
+    display: flex;
+    max-width: 100%;
+    height: 80px;
+    align-items: center;
+    justify-content: center;
+  }
+  .divnav1{
+    display: flex;
+    align-items: baseline;
+  }
+  .divnav2{
+    display: flex;
+  }
+  .inputTodo {
+    border-radius: 10px;
+    height: 30px;
+    border: 0ch;
+    padding-left: 10px;
+    box-shadow: 1px 3px 9px 0px #000000;
+  }
+  .btnNav {
+    border-radius: 10px;
+    height: 40px;
+    margin-left: 10px;
+    box-shadow: 1px 3px 9px 0px #000000;
+    border: 0ch;
+    background-color: rgb(253, 194, 91);
+  }
+  .btnNav:hover {
+    background-color: rgb(253, 156, 91);
+  }
+  .div2 {
+    display: flex;
+  }
+  .divList {
+    width: 70%;
+    margin-left: 20px;
+    min-height: 540px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 1px 5px 9px 0px #000000;
+  }
+  .h1Div {
+    text-align: center;
+    color: #9F62CB;
+  }
+  .listDiv {
+    padding: 10px;
+  }
+  .newLi {
+    color: #9F62CB;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+  .newRemoveBtn {
+    border-radius: 10px;
+    height: 30px;
+    margin-left: 30px;
+    box-shadow: 1px 3px 9px 0px #000000;
+    border: 0ch;
+    background-color: rgb(253, 142, 91);
+  }
+  .newRemoveBtn:hover{
+  opacity: 0.8;
+  }
+  .newDoneBtn {
+    border-radius: 10px;
+    height: 30px;
+    margin-left: 10px;
+    box-shadow: 1px 3px 9px 0px #000000;
+    border: 0ch;
+    background-color: rgb(253, 237, 91);
+  }
+  .newDoneBtn:hover{
+    opacity: 0.8;
+    }
+  .pirsomet {
+    width: 29%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+  }
+  
+  .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 100%;
+    right: 0;
+    background: -webkit-linear-gradient(left, #DEA050 0%, #9F62CB 58%, #0745CE); */
+    border-radius: 20px;
+    overflow: hidden;
+    width: 0;
+    height: 100%;
+    transition: .5s ease;
+  }
+  
+  .pirsomet:hover .overlay {
+    width: 100%;
+    left: 0;
+  }
+  
+  .text {
+    white-space: nowrap; 
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+  }
+  img {
+    width: 500px;
+    transform: rotate(90deg);
+    display: block;
+  }
+  
+  footer {
+    min-height: 90px;
+    max-width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    
+    justify-content: space-around;
+    border-radius: 10px;
+  }
+  .divsFooter{
+   color: #00710d
+  }
+  .linethrough {
+    text-decoration: line-through solid rgb(3, 0, 0);
+  }
+  
+  @media screen and (max-width: 700px) {
+    .div1 {
+      -width: 100%;
+      min-height: 500px;
+      margin-top: -8px;
+      margin-left: -8px;
+      margin-right: -8px;
+      border-radius: 0%;
+    }
+    .Nav{
+      display: block;
+      padding: 20px ;
+      
+    }
+    .divnav1{
+      display: flex;
+      align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+    
+    .divnav2{
+      display: flex;
+      align-items: center;
+    justify-content: center;
+  }
+    
+    .btnNav {  
+      /* padding: 0 3px; */
+    
+    }
+    .divList {
+      width: 90%;
+      min-height: 400px;
+      margin: 0 auto;
+      margin-bottom: 30px;
+    }
+    .btnNav {
+      border-radius: 10px;
+      height: 40px;
+      margin-left: 6px;
+      box-shadow: 1px 3px 9px 0px #000000;
+      border: 0ch;
+      background-color: rgb(237, 248, 21);
+      font-size: 12px;
+    }
+    .pirsomet {
+      width: 50%;
+      height: 50px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+    }
+    .div2 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .pirsomet {
+      width: 29%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      margin: 20px auto;
+    }
+    .overlay {
+      display: none;
+    }
+    .text {
+     display: none;
+    }
+    img {
+      width: 300px;
+      transform: rotate(0deg);
+      display: block;
+    }
+  }
+  
