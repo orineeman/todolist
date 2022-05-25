@@ -6,6 +6,8 @@ const divList = document.querySelector(".divList");
 const showBtn = document.querySelector(".showBtn");
 let arrAllLists = [];
 
+
+// הוספת אובייקט למערך
 addBtn.onclick = function () {
   if (inputTodo.value !== "") {
     arrAllLists.push({
@@ -17,7 +19,7 @@ addBtn.onclick = function () {
     displayList(arrAllLists);
   }
 };
-
+// תצוגת הרשימה על המסך
 function displayList(arr) {
   ulList.innerHTML = "";
   for (i = 0; i < arr.length; i++) {
@@ -32,14 +34,14 @@ function displayList(arr) {
     );
   }
 }
-
+// יצירת רשומה חדשה
 function createNewLi(objList) {
   const newLi = document.createElement("li");
   newLi.classList.add("newLi");
   newLi.textContent = objList.toDolist;
   return newLi;
 }
-
+// "יצירת כפתור "הסרה
 function createNewRemoveBtn(list, arrIndex) {
   const newRemoveBtn = document.createElement("button");
   newRemoveBtn.classList.add("newRemoveBtn");
@@ -49,14 +51,14 @@ function createNewRemoveBtn(list, arrIndex) {
   newRemoveBtn.onclick = () => RemoveList(list, arrIndex);
   return newRemoveBtn;
 }
-
+// הסרת רשומה
 function RemoveList(list, arrIndex) {
   arrAllLists = arrAllLists.filter((p) => p.toDolist !== list.textContent);
   ulList.removeChild(list);
   ulList.removeChild(document.getElementById("RemoveBtn" + arrIndex));
   ulList.removeChild(document.getElementById("DoneBtn" + arrIndex));
 }
-
+// "יצירת כפתור "נעשה
 function createNewDoneBtn(list, arrIndex, objList) {
   const newDoneBtn = document.createElement("button");
   newDoneBtn.classList.add("newDoneBtn");
@@ -66,24 +68,22 @@ function createNewDoneBtn(list, arrIndex, objList) {
   newDoneBtn.onclick = () => doneList(list, arrIndex, objList);
   return newDoneBtn;
 }
-
+// "סימון רשומה כ"נעשה
 function doneList(list, arrIndex, objList) {
   list.classList.add("linethrough");
   objList.done = true;
 }
-
+// שינוי מראה הדף
 toggleBtn.onclick = function () {
-  if (toggleBtn.textContent === "Dark Mode") {
+  if (toggleBtn.innerText === "Dark Mode") {
     divList.style.background = "black";
-    divList.style.color = "#c9F62CB";
     toggleBtn.textContent = "Standard view";
   } else {
     divList.style.background = "white";
-    divList.style.color = "#c9F62CB";
     toggleBtn.textContent = "Dark Mode";
   }
 };
-
+// מראה רק את הרשומות שנעשו
 showBtn.onclick = function showButton() {
   if (showBtn.textContent === "Show done") {
     const doneArr = [];
